@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+body {
+  background; Indigo;
+}
+
 .app {
   width: 100%;
   max-width: 720px;
@@ -55,7 +59,7 @@ figure {
 .highlight::before {
   content: 'Você';
   position: absolute;
-  left: 50%; 
+  left: 50%;
   font-weight: bold;
   color: DeepPink;
   transform: translate( -50%, -150% );
