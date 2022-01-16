@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700');
+
+* {
+  box-sizing: border-box;
+}
+
+.app {
+  width: 100%;
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 24px;
+  border-radius: 12px;
+  font-family: Raleway;
+  background: GhostWhite;
+  color: Indigo;
+}
+
+form {
+  margin: 48px 0;
+}
+
+figure {
+  margin: 48px 0;
+}
+
+.bar {
+  position: relative;
+  height: 24px;
+  width: 100%;
+  background: Lavender;
+}
+
+.fill {
+  position: absolute;
+  height: 100%;
+  width: 1%;
+  background: Plum;
+  transition: all .8s ease;
+}
+
+.highlight {
+  position: absolute;
+  left: 0;
+  height: 100%;
+  width: 1%;
+  opacity: 0;
+  background: DeepPink;
+  transition: all .8s ease;
+}
+
+.highlight.visible {
+  opacity: 1;
+}
+
+.highlight::before {
+  content: 'Você';
+  position: absolute;
+  left: 50%; 
+  font-weight: bold;
+  color: DeepPink;
+  transform: translate( -50%, -150% );
+}
+
+.output {
+  font-weight: bold;
+}
+
+a {
+  color: inherit;
+}
