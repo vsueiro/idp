@@ -5,13 +5,17 @@ let button    = document.querySelector( 'button' )
 let output    = document.querySelector( '.output' )
 let fill      = document.querySelector( '.fill' )
 let highlight = document.querySelector( '.highlight' )
+let form      = document.querySelector( 'form' )
 let salaries
 
 
 
 // Update results
 
-function update() {
+function update( event ) {
+
+  if ( event )
+    event.preventDefault()
 
   // Cast input, from string to number
   let value = parseInt( input.value )
@@ -72,7 +76,7 @@ fetch( 'data.json' )
     // Assign data to global variable
     salaries = data
 
-    // Handle click on button
-    button.addEventListener( 'click', update )
+    // Handle form submission (works with Enter key)
+    form.addEventListener( 'submit', update )
 
   } )
