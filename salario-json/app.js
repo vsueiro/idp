@@ -10,10 +10,7 @@ function calculate( event ) {
   const value = parseInt( input.value )
 
   for ( let salary of salaries ) {
-
-    console.log( value, salary.lowerLimit )
-
-    if ( value  salary.lowerLimit ) {
+    if ( value > salary.lowerLimit ) {
       show( salary.percentile )
       break
     }
