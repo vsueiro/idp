@@ -1,44 +1,41 @@
-<!DOCTYPE html>
+<!doctype html>
+
 <html>
   <head>
-    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Seu salário, em escala</title>
-    <link rel="stylesheet" href="app.css">
   </head>
   <body>
 
-    <div class="app">
+    <header>
+      <h1>Seu salário, em escala</h1>
+      <p>Compare sua renda mensal com o salário da população brasileira</p>
+    </header>
 
-      <header>
-        <h1>Seu salário, em escala</h1>
-        <p>Compare sua renda mensal com o salário da população brasileira</p>
-      </header>
+    <form id="form">
+
+      <label>
+        Salário: R$
+        <input id="input" type="number" min="0" placeholder="1000">
+      </label>
+
+      <button>
+        Comparar
+      </button>
+
+    </form>
   
-      <form>
-        <label>
-          Salário: R$ <input type="number" placeholder="1000">
-        </label>
-        <button>Comparar</button>
-      </form>
-    
-      <p class="output">
-        ...
+    <p>
+      Você ganha mais que <output id="output">...</output>% dos brasileiros:
+    </p>
+
+    <progress id="progress" max="100" value="0"></progress>
+
+    <footer>
+      <p>
+        Baseado na <a href="https://www.nexojornal.com.br/interativo/2016/01/11/O-seu-sal%C3%A1rio-diante-da-realidade-brasileira">calculadora de salário do Nexo</a>.
       </p>
-  
-      <figure>
-        <div class="bar">
-          <div class="fill"></div>
-          <div class="highlight"></div>
-        </div>
-      </figure>
-  
-      <footer>
-        <p>
-          Baseado na <a href="https://www.nexojornal.com.br/interativo/2016/01/11/O-seu-sal%C3%A1rio-diante-da-realidade-brasileira">calculadora de salário do Nexo</a>.
-        </p>
-      </footer>
-    </div>
+    </footer>
 
     <script src="app.js"></script>
 
