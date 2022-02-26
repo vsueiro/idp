@@ -4,10 +4,18 @@ fetch( 'salaries.json' )
   .then( response => response.json() )
   .then( data     => salaries = data )
 
-function calculate( event ) {
+function validate() {
 
-  event.preventDefault()
   const value = parseInt( input.value )
+  
+  if ( isNaN( value ) || value < 0 )
+    clear()
+  else
+    calculate( value )
+
+}
+
+function calculate( value ) {
 
   for ( let salary of salaries ) {
     if ( value > salary.lowerLimit ) {
@@ -19,8 +27,13 @@ function calculate( event ) {
 }
 
 function show( percentile ) {
-  output.textContent = percentile
-  progress.value = percentile
+  output.textContent = percentile + '%'
+  fill.style.width = percentile + '%'
 }
 
-form.addEventListener( 'submit', calculate )
+function clear() {
+  output.textContent = '…%'
+  fill.removeAttribute( 'style' )
+}
+
+input.addEventListener( 'input', validate )
