@@ -26,5 +26,5 @@ function clear() {
   output.textContent = '…%'
 }
 
-input.addEventListener( 'keydown', clear )
+input.addEventListener( 'input', clear )
 form.addEventListener( 'submit', calculate )
