@@ -1,0 +1,50 @@
+[
+    {
+        "percentile": 5,
+        "upperLimit": 146
+    },
+    {
+        "percentile": 10,
+        "upperLimit": 252
+    },
+    {
+        "percentile": 20,
+        "upperLimit": 396
+    },
+    {
+        "percentile": 30,
+        "upperLimit": 527
+    },
+    {
+        "percentile": 40,
+        "upperLimit": 673
+    },
+    {
+        "percentile": 50,
+        "upperLimit": 836
+    },
+    {
+        "percentile": 60,
+        "upperLimit": 1035
+    },
+    {
+        "percentile": 70,
+        "upperLimit": 1263
+    },
+    {
+        "percentile": 80,
+        "upperLimit": 1682
+    },
+    {
+        "percentile": 90,
+        "upperLimit": 2646
+    },
+    {
+        "percentile": 95,
+        "upperLimit": 4082
+    },
+    {
+        "percentile": 99,
+        "upperLimit": 9832
+    }
+]
