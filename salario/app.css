@@ -49,6 +49,7 @@ output {
 }
 
 .bar {
+  display: flex;
   width: 100%;
   height: 24px;
   background: Lavender;
@@ -58,26 +59,34 @@ output {
   position: relative;
   width: 0%;
   height: 100%;
-  background-color: Plum;
-  border-right: 2px solid DeepPink;
+  background: Plum;
   transition: width 1s;
 }
 
-#fill::after {
-  content: 'Você';
-  position: absolute;
-  color: DeepPink;
-  font-weight: bold;
-  right: 0;
-  top: 0;
-  height: 24px;
-  transform: translate( 50%, -125% );
+#bin {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  width: 0%;
+  height: 100%;
   opacity: 0;
-  transition: opacity 1s;
+  background: DeepPink;
+  transition: opacity 1s, width 1s;
 }
 
-#fill[style]::after {
-  opacity: 1
+#bin::before {
+  content: 'Você';
+  position: absolute;
+  top: -32px;
+  /* left: 0; */
+  /* width: 100%; */
+  text-align: center;
+  font-weight: bold;
+  color: DeepPink;
+}
+
+#bin[style] {
+  opacity: 1;
 }
 
 footer {
