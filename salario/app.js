@@ -1,8 +1,9 @@
+let file = 'pnad-renda-2020.json'
 let salaries = []
 
-fetch( 'salaries.json' )
+fetch( file )
   .then( response => response.json() )
-  .then( data     => salaries = data )
+  .then( data => salaries = data.reverse() )
 
 function validate() {
 
@@ -19,7 +20,8 @@ function calculate( value ) {
 
   for ( let salary of salaries ) {
     if ( value > salary.lowerLimit ) {
-      show( salary.percentile )
+      show( salary.from )
+      resizeBin( salary )
       break
     }
   }
@@ -31,9 +33,15 @@ function show( percentile ) {
   fill.style.width = percentile + '%'
 }
 
+function resizeBin( salary ) {
+  let size = salary.to - salary.from
+  bin.style.width = size + '%'
+}
+
 function clear() {
   output.textContent = '…%'
   fill.removeAttribute( 'style' )
+  bin.removeAttribute( 'style' )
 }
 
 input.addEventListener( 'input', validate )
