@@ -1,0 +1,48 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Calculadora de salário</title>
+    <style>
+      #track {
+        background: lightgray; 
+        width: 400px;  
+        height: 24px;
+        margin-bottom: 24px;
+      }
+
+      #bar {
+        background: green;
+        width: 0%;
+        height: 100%;
+        transition: width 1s;
+      }
+    </style>
+  </head>
+  <body>
+
+    <h1>
+      Seu salário, em escala
+    </h1>
+
+    <p>
+      Com um salário de R$
+      <input id="input">
+      você ganha mais que
+      <output id="output">…%</output>
+      dos brasileiros
+    </p>
+
+    <div id="track">
+      <div id="bar"></div>
+    </div>
+
+    <footer>
+      Fonte: IBGE/PNAD Contínua (2020).
+      Projeto inspirado na
+      <a target="_blank" href="https://www.nexojornal.com.br/interativo/2016/01/11/O-seu-sal%C3%A1rio-diante-da-realidade-brasileira">calculadora do Nexo</a>.
+    </footer>
+
+    <script src="app.js"></script>
+
+  </body>
+</html>
